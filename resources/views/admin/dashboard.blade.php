@@ -6,9 +6,9 @@
         <div class="d-flex align-items-end flex-wrap">
           <div class="me-md-3 me-xl-5">
             @if(session('message'))
-            <h2>{{session('message')}}</h2>
+            <h2 class="alert alert-success">{{session('message')}}</h2>
             @endif
-            <p class="mb-md-0">XIN CHÀO.</p>
+            <p class="mb-md-0">XIN CHÀO <b>{{Auth::user()->name}}</b></p>
           </div>
           <div class="d-flex">
             <i class="mdi mdi-home text-muted hover-cursor"></i>

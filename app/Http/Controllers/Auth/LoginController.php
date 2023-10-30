@@ -29,7 +29,7 @@ class LoginController extends Controller
 
     protected function authenticated(){
         if(Auth::user()->role_as == '1'){
-            return redirect('admin/dashboard')->with('message','Chào mừng bạn đến với bản điều khiển Admin');
+            return redirect('admin/dashboard')->with('message','CHÀO MỪNG ĐẾN VỚI DASHBOARD');
         }
             else{
                 return redirect('/home')->with('status','Đăng nhập thành công!');
