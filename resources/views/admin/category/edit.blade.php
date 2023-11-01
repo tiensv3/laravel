@@ -26,17 +26,17 @@
 
                         <div class="mb3 col-md-12">
                             <label for="">Description</label>
-                            <textarea type="text" name="description" class="form-control" rows="3" >{{$category->description}}</textarea>
+                            <textarea type="text" name="description" class="form-control" rows="3" required>{{$category->description}}</textarea>
                         </div>
 
                         <div class="mb3 col-md-6">
                             <label for="">Image</label>
                             <input type="file" name="image" class="form-control">
-                            <img src="{{asset('/uploads/category/'.$category->image)}}" alt="" width="150px" height="150px">
+                            <img src="{{asset('/uploads/category/'.$category->image)}}" alt="Image not exist!" width="150px" height="150px">
                         </div>
                         <div class="mb3 col-md-6">
                             <label for="">Status</label>
-                            <input type="checkbox" name="status" value="{{$category->status == 1}} ? 'checked':''">
+                            <input type="checkbox" name="status" {{$category->status == 1 ? 'checked':''}}>
                         </div>
 
                         <div class="con-md-12 mb3">
@@ -46,17 +46,17 @@
 
                         <div class="mb3 col-md-12">
                             <label for="">Meta title</label>
-                            <input type="text" name="meta_title" class="form-control" value="{{$category->meta_title}}" >
+                            <input type="text" name="meta_title" class="form-control" value="{{$category->meta_title}}" required>
                         </div>
 
                         <div class="mb3 col-md-12">
                             <label for="">Meta keyword</label>
-                            <textarea type="text" name="meta_keyword" class="form-control" rows="3" >{{$category->meta_keyword}}</textarea>
+                            <textarea type="text" name="meta_keyword" class="form-control" rows="3" required>{{$category->meta_keyword}}</textarea>
                         </div>
 
                         <div class="mb3 col-md-12">
                             <label for="">Meta description</label>
-                            <textarea type="text" name="meta_description" class="form-control" rows="3" >{{$category->meta_description}}</textarea>
+                            <textarea type="text" name="meta_description" class="form-control" rows="3" required>{{$category->meta_description}}</textarea>
                         </div>
 
                         <div class="mb3 col-md-12">

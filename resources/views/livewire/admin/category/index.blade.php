@@ -1,5 +1,30 @@
 <div>
-    <div class="row">
+<!-- Modal -->
+<div wire:ignore.self class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Delete category</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <form wire:submit.prevent="destroyCategory">
+        <div class="modal-body">
+          <h5 style="color: red;">Are you sure?</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row">
         <div class="col-md-12">
             @if(session('message'))
             
@@ -31,7 +56,7 @@
                                     <td>{{$category->status == '1' ? 'Hidden':'Visible'}}</td>
                                     <td>
                                         <a href="{{url('admin/category/'.$category->id.'/edit')}}" class="btn btn-warning" style="border-color: black; border-width: 2px; border-style: solid; border-radius: 5px;">EDIT</a>
-                                        <a href="" class="btn btn-danger"style="border-color: black; border-width: 2px; border-style: solid; border-radius: 5px;"><b>DELETE</b></a>
+                                        <a href="#" wire:click="deleteCategory({{$category->id}})" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" style="border-color: black; border-width: 2px; border-style: solid; border-radius: 5px;"><b>DELETE</b></a>
                                     </td>
                             </tr>
                         @endforeach
@@ -42,4 +67,6 @@
             </div>
         </div>
     </div>
+</div>
+
 </div>

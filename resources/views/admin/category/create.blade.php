@@ -25,7 +25,7 @@
 
                         <div class="mb3 col-md-12">
                             <label for="">Description</label>
-                            <textarea type="text" name="description" class="form-control" rows="3"></textarea>
+                            <textarea type="text" name="description" class="form-control" rows="3" required></textarea>
                         </div>
 
                         <div class="mb3 col-md-6">
@@ -34,7 +34,7 @@
                         </div>
                         <div class="mb3 col-md-6">
                             <label for="">Status</label>
-                            <input type="checkbox" name="status">
+                            <input type="checkbox" name="status" required>
                         </div>
 
                         <div class="con-md-12 mb3">
@@ -44,17 +44,17 @@
 
                         <div class="mb3 col-md-12">
                             <label for="">Meta_title</label>
-                            <input type="text" name="meta_title" class="form-control">
+                            <input type="text" name="meta_title" class="form-control" required>
                         </div>
 
                         <div class="mb3 col-md-12">
                             <label for="">Meta Keyword</label>
-                            <textarea type="text" name="meta_keyword" class="form-control" rows="3"></textarea>
+                            <textarea type="text" name="meta_keyword" class="form-control" rows="3" required></textarea>
                         </div>
 
                         <div class="mb3 col-md-12">
                             <label for="">Meta description</label>
-                            <textarea type="text" name="meta_description" class="form-control" rows="3"></textarea>
+                            <textarea type="text" name="meta_description" class="form-control" rows="3" required></textarea>
                         </div>
 
                         <div class="mb3 col-md-12">
